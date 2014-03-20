@@ -30,5 +30,29 @@ $(document).ready(function() {
 		$(".ryu-throwing").hide();
 		$(".ryu-ready").show();
 	});
-  
+	$(document).on("keydown", function(event){
+
+		if (event.which == 88) {
+			$(".ryu-still").hide();
+			$(".ryu-ready").hide();
+			$(".ryu-cool").show().on("mouseleave", function(){
+
+				$(".ryu-cool").hide();
+
+			});
+						
+		}
+
 });
+
+$(document).on("keyup", function(){
+				
+				$(".ryu-cool").hide();
+				$(".ryu-ready").hide();
+				$(".ryu-still").show();
+
+});
+
+$(".para").slideDown("slow");
+});
+
