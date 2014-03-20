@@ -46,6 +46,8 @@ $(document).ready(function() {
 				$(".ryu-still").show();
 			}
 
+}).on("click", function(){
+	$(".ryu-ready").hide();
 });
 
 
