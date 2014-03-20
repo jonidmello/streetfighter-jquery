@@ -35,23 +35,22 @@ $(document).ready(function() {
 		if (event.which == 88) {
 			$(".ryu-still").hide();
 			$(".ryu-ready").hide();
-			$(".ryu-cool").show().on("mouseleave", function(){
-
-				$(".ryu-cool").hide();
-
-			});
+			$(".ryu-cool").show();
 						
 		}
 
-});
-
-$(document).on("keyup", function(){
-				
+}).on("keyup", function(event){
+				if (event.which == 88){
 				$(".ryu-cool").hide();
 				$(".ryu-ready").hide();
 				$(".ryu-still").show();
+				$(".ryu-throwing").hide();
+			}
 
+}).on("click", function(){
+	$(".ryu-ready").hide();
 });
+
 
 $(".para").slideDown("slow");
 });
